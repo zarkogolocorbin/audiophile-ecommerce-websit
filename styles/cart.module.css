@@ -1,0 +1,160 @@
+.overlay {
+  position: fixed;
+  top: 8.9rem;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+
+  z-index: 122;
+}
+
+.cart-center {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.cart-content {
+  width: 377px;
+  height: 488px;
+  padding: 32px;
+  border-radius: 8px;
+  background: #fff;
+  position: absolute;
+  top: 32px;
+  right: 165px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.8rem;
+}
+
+.cart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-items {
+  width: 100%;
+  position: relative;
+}
+
+.scroll-item {
+  width: 100%;
+  height: 240px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.4rem;
+}
+
+.scroll-item::-webkit-scrollbar {
+  width: 0.4em;
+}
+
+.scroll-item::-webkit-scrollbar,
+.scroll-item::-webkit-scrollbar-thumb {
+  overflow: visible;
+  border-radius: 4px;
+}
+.scroll-item::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.cover-bar {
+  position: absolute;
+  background: #fff;
+  height: 100%;
+  top: 0;
+  right: 0;
+  width: 0.4em;
+  transition: all 0.5s;
+  opacity: 1;
+}
+
+.cart-items:hover .cover-bar {
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.cart-header h2 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+
+.cart-name {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.cart-price {
+  font-weight: 700;
+  font-size: 1.4rem;
+  opacity: 0.5;
+}
+
+.cart-header button {
+  opacity: 0.5;
+  border: none;
+  background: transparent;
+  font-weight: 500;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  column-gap: 1.6rem;
+}
+
+.cart-item img {
+  border-radius: 0.8rem;
+}
+
+.total-amount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.total-amount h2 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  opacity: 0.5;
+}
+
+.total-amount span {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.empty-cart {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-cart p {
+  font-size: 2.4rem;
+}
+
+@media screen and (max-width: 768px) {
+  .cart-content {
+    top: 3.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .cart-content {
+    width: 327px;
+    padding: 2.4rem;
+  }
+}

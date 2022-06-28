@@ -1,0 +1,250 @@
+.first-showCase,
+.second-showCase,
+.third-showCase {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 calc(10vw + 21px);
+}
+
+.showcase-center {
+  background-image: url("/assets/home/desktop/pattern-circles.svg");
+  background-size: 2;
+  background-repeat: no-repeat;
+  background-position: -95% 0%;
+  background-color: #d87d4a;
+  height: 56rem;
+  border-radius: 8px;
+  margin-bottom: 4.8rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+}
+
+.showcase-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 2.8rem;
+}
+
+.showcase-content h2 {
+  color: #ffff;
+  font-weight: 700;
+  font-size: 5.6rem;
+  max-width: 261px;
+}
+
+.showcase-content p {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 25px;
+  max-width: 350px;
+  opacity: 0.6;
+}
+
+.showcase-image-desktop {
+  margin-bottom: -115px;
+}
+.showcase-image-tablet,
+.showcase-image-mobile {
+  display: none;
+}
+
+.showcase-content a {
+  display: block;
+  width: 160px;
+  height: 48px;
+  background-color: #000000;
+  color: #ffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+.second-showcase-center {
+  background-image: url("/assets/home/desktop/image-speaker-zx7.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 320px;
+  margin-bottom: 4.8rem;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  padding-left: 9.5rem;
+}
+
+.second-showcase-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3.2rem;
+}
+
+.second-showcase-content h1 {
+  font-weight: 700;
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+}
+
+.second-showcase-content a {
+  width: 160px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  border: 1px solid #000000;
+}
+
+.third-showcase-center {
+  margin-bottom: 20rem;
+  display: flex;
+  column-gap: 3rem;
+}
+
+.third-showcase-tablet-image,
+.third-showcase-mobile-image {
+  display: none;
+}
+
+.third-showcase-desktop-image img {
+  border-radius: 10px;
+}
+
+.third-showcase-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3.2rem;
+  justify-content: center;
+  padding-left: 9.5rem;
+  flex-basis: 50%;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+.third-showcase-content h1 {
+  font-weight: 700;
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+}
+
+.third-showcase-content a {
+  width: 160px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  border: 1px solid #000000;
+}
+
+@media screen and (max-width: 1024px) {
+  .showcase-center {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 720px;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 6.4rem;
+  }
+
+  .showcase-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .showcase-image-desktop {
+    display: none;
+  }
+
+  .showcase-image-tablet {
+    display: block;
+  }
+
+  .second-showcase-center {
+    background-image: url("/assets/home/tablet/image-speaker-zx7.jpg");
+    padding-left: 6.2rem;
+  }
+
+  .third-showcase-center {
+    margin-bottom: 9.6rem;
+  }
+
+  .third-showcase-desktop-image {
+    display: none;
+  }
+
+  .third-showcase-tablet-image {
+    display: block;
+  }
+
+  .third-showcase-tablet-image img {
+    border-radius: 10px;
+  }
+
+  .third-showcase-content {
+    padding-left: 6.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .first-showCase,
+  .second-showCase,
+  .third-showCase {
+    padding: 0 calc(10vw - 13.5px);
+  }
+  .showcase-image-tablet {
+    display: none;
+  }
+  .showcase-image-mobile {
+    display: block;
+  }
+
+  .second-showcase-center {
+    background-image: url("/assets/home/mobile/image-speaker-zx7.jpg");
+    padding-left: 2.4rem;
+  }
+
+  .third-showcase-center {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 3.2rem;
+  }
+
+  .third-showcase-tablet-image {
+    display: none;
+  }
+
+  .third-showcase-mobile-image {
+    display: block;
+  }
+
+  .third-showcase-mobile-image img {
+    border-radius: 10px;
+  }
+
+  .third-showcase-content {
+    width: 100%;
+    padding: 4.1rem 0 4.1rem 2.4rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .first-showCase,
+  .second-showCase,
+  .third-showCase {
+    padding-left: 16.5rem;
+    padding-right: 16.5rem;
+  }
+}

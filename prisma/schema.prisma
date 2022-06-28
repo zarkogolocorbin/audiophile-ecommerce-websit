@@ -1,0 +1,60 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Category {
+  id Int @id @default(autoincrement())
+  name String
+  products Product[]
+}
+
+model Product {
+  id Int @id @default(autoincrement())
+  name String @unique
+  model String @default("default value")
+  slug String @unique
+  new Boolean @default(true)
+  price Int
+  description String
+  firstFeatureText String
+  secondFeatureText String
+  smallMainImage String
+  mediumMainImage String
+  largeMainImage String
+  categoryId Int
+  category Category @relation(fields: [categoryId], references: [id])
+  includes Include[]
+  galeryImage Galery[]
+
+}
+
+model Include {
+  id Int @id @default(autoincrement())
+  quantity Int @default(1)
+  item String
+  productId Int
+  product Product @relation(fields: [productId], references: [id])
+}
+
+model Galery {
+  id Int @id @default(autoincrement())
+  firstSmallImage String
+  firstMediumImage String
+  firstLargeImage String
+  secondSmallImage String
+  secondMediumImage String
+  secondLargeImage String
+  thirdSmallImage String
+  thirdMediumImage String
+  thirdLargeImage String
+  productId Int
+  product Product @relation(fields: [productId], references: [id])
+}

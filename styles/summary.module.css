@@ -1,0 +1,101 @@
+.summary {
+  background-color: #fff;
+  flex-basis: 350px;
+  border-radius: 0.8rem;
+  padding: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3.2rem;
+}
+
+.summary h2 {
+  font-size: 1.8rem;
+  line-height: 25px;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+
+.summary-item {
+  display: flex;
+  align-items: center;
+  column-gap: 1.8rem;
+}
+
+.item-details span {
+  display: block;
+  font-weight: 700;
+  line-height: 25px;
+}
+
+.name {
+  font-size: 1.5rem;
+}
+
+.price {
+  font-size: 1.4rem;
+  opacity: 0.4;
+}
+
+.summary-items {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.4rem;
+}
+.summary-item h3 {
+  margin-left: auto;
+  font-weight: 700;
+  font-size: 1.5rem;
+  opacity: 0.5;
+}
+
+.pay-info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.8rem;
+}
+
+.pay-info div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.grand-total {
+  margin-top: 2.4rem;
+}
+
+.light-text {
+  font-weight: 500;
+  font-size: 1.5rem;
+  opacity: 0.4;
+}
+
+.dark-text {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.orange-text {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #d87d4a;
+}
+
+.continue-button {
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  outline: none;
+  width: 284px;
+  height: 48px;
+  background-color: #d87d4a;
+}
+
+@media screen and (max-width: 1024px) {
+  .summary {
+    width: 100%;
+  }
+}

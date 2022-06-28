@@ -1,0 +1,156 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 200;
+}
+
+.conformation {
+  background: #ffff;
+  padding: 4.8rem;
+  max-width: 540px;
+  border-radius: 8px;
+  margin: 12rem auto;
+}
+
+.conformation h1 {
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 36px;
+  letter-spacing: 1.14px;
+  max-width: 284px;
+  margin: 3.2rem 0 2.4rem;
+}
+
+.conformation > p {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 25px;
+  opacity: 0.5;
+  margin-bottom: 3.3rem;
+}
+
+.conformation > button {
+  margin-top: 4.6rem;
+  width: 100%;
+  height: 4.8rem;
+  background-color: #d87d4a;
+  border: 1px solid #d87d4a;
+  text-transform: uppercase;
+
+  color: #f1f1f1;
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+.grand-order {
+  display: flex;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.order-items {
+  padding: 2.4rem 2.4rem 1.8rem;
+  flex-basis: 246px;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+}
+
+.order-items button {
+  border: none;
+  outline: none;
+  background: transparent;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding-top: 1.2rem;
+  margin-top: 1.6rem;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.order-item-flex {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.6rem;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  column-gap: 0.8rem;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 1.4rem;
+  opacity: 0.5;
+}
+
+.quantity {
+  margin-left: auto;
+  font-weight: 700;
+  font-size: 1.4rem;
+  opacity: 0.5;
+}
+
+.grand-total {
+  padding: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+
+  background-color: #000000;
+  flex-basis: 198px;
+}
+
+.grand-total h2 {
+  color: #ffff;
+  opacity: 0.5;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.grand-total p {
+  color: #ffff;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+@media screen and (max-width: 689px) {
+  .overlay {
+    padding: 2.4rem;
+    overflow: scroll;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .grand-order {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .order-items {
+    flex-basis: auto;
+  }
+
+  .grand-total {
+    flex-basis: auto;
+  }
+
+  .conformation {
+    margin: 0.2rem auto;
+    padding: 3.2rem;
+  }
+}

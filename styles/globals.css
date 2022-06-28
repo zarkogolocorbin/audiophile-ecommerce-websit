@@ -1,9 +1,17 @@
-html,
-body {
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+html,
+body {
+  font-size: 62.5%;
+  font-family: "Manrope", sans-serif;
 }
 
 a {
@@ -11,6 +19,112 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+footer {
+  background-color: #101010;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 120px;
+  height: 48px;
+  background-color: #f1f1f1;
+  padding: 0 1.5rem 0 1.5rem;
+}
+
+.counter.cart-counter {
+  height: 34px;
+  margin-left: auto;
+  width: 96px;
+}
+
+.counter p,
+.counter span {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.counter p {
+  cursor: pointer;
+}
+
+.prev-btn {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 6.5rem calc(10vw + 21px) 3.6rem;
+}
+
+.prev-btn a {
+  border: none;
+  outline: none;
+
+  font-weight: 500;
+  opacity: 0.5;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.footer {
+  background: rgb(16, 16, 16);
+}
+
+@media screen and (max-width: 962px) {
+  .prev-btn {
+    padding: 1.6rem calc(10vw - 13.5px) 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .prev-btn {
+    padding-left: 16.5rem;
+  }
+}
+
+/* style button */
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  width: 100%;
+  color: #fff;
+  background-color: #d87d4a;
+  border: 1.5px solid #d87d4a;
+  height: 4.8rem;
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #d87d4a;
+  border-color: #d87d4a;
+}
+
+.btn.disabled {
+  opacity: 0.4;
+  cursor: no-drop;
+}
+
+.btn.btn.disabled:hover {
+  background-color: #d87d4a;
+  color: #fff;
+}
+
+.sidebar-overlay {
+  position: static;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  z-index: 1000;
+
+  overflow: scroll;
 }

@@ -1,0 +1,15 @@
+.jumbotron {
+  background-color: #191919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 239px;
+}
+
+.jumbotron h1 {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 4rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
