@@ -10,6 +10,7 @@ import { useRouter } from "next/router";
 export default function NavbarComponent() {
   const { showCart, setShowCart, cartItems, isSidebarOpen, setIsSidebarOpen } =
     useContext(CartContext);
+
   const router = useRouter();
 
   const handleClick = () => {
@@ -19,17 +20,22 @@ export default function NavbarComponent() {
   return (
     <nav className={styles.navbar}>
       <div className={styles["navbar-center"]}>
-        <div onClick={() => handleClick()} className={styles["hamburger-menu"]}>
+        <div
+          onClick={() => handleClick()}
+          className={styles[`${isSidebarOpen ? "close-menu" : "open-menu"}`]}
+        >
           <div></div>
           <div></div>
           <div></div>
         </div>
+
         <Image
           src="/assets/shared/logo.svg"
           width={143}
           height={25}
           alt="logo image"
         />
+
         <div className={styles["navbar-links"]}>
           <Link href="/">
             <a className={styles[`${router.asPath === "/" ? "active" : ""}`]}>

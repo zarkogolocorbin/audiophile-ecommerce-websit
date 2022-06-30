@@ -4,7 +4,7 @@
 .checkout-wrapper {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 calc(10vw + 21px);
+  padding: 6.5rem calc(10vw + 21px);
   padding-bottom: 14rem;
   display: flex;
   column-gap: 3rem;
@@ -175,7 +175,7 @@ input:focus {
 
 @media screen and (max-width: 768px) {
   .checkout-wrapper {
-    padding: 0 calc(10vw - 13.5px);
+    padding: 4rem calc(10vw - 13.5px);
   }
   .form-split {
     display: grid;
@@ -200,6 +200,16 @@ input:focus {
 
   .form-wrapper {
     padding: 2.4rem;
+  }
+
+  .cash-delivery {
+    flex-direction: column;
+    row-gap: 3.2rem;
+  }
+
+  .cash-delivery p {
+    flex: auto;
+    text-align: center;
   }
 }
 

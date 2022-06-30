@@ -33,7 +33,7 @@
   color: #d87d4a;
 }
 
-.hamburger-menu {
+.open-menu {
   display: none;
 }
 
@@ -72,17 +72,32 @@
   .navbar-links {
     display: none;
   }
-  .hamburger-menu {
+  .open-menu,
+  .close-menu {
     display: flex;
     flex-direction: column;
     row-gap: 3px;
     cursor: pointer;
   }
 
-  .hamburger-menu div {
+  .open-menu div,
+  .close-menu div {
     background-color: #fff;
     width: 20px;
     height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .close-menu div:nth-child(1) {
+    transform: translateY(3px) rotate(45deg);
+  }
+
+  .close-menu div:nth-child(2) {
+    display: none;
+  }
+
+  .close-menu div:nth-child(3) {
+    transform: translateY(-3px) rotate(-45deg);
   }
 }
 @media screen and (max-width: 1024px) {

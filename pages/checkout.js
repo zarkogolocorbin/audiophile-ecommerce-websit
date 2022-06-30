@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import FooterComponent from "../components/Shared/Footer";
 import NavbarComponent from "../components/Shared/Navbar";
+import Head from "next/head";
 import Link from "next/link";
 import SummaryComponent from "../components/Checkuout/Summary";
 import Image from "next/image";
@@ -9,6 +10,7 @@ import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import FieldComponent from "../components/Checkuout/Field";
 import Confirmation from "../components/Shared/Confirmation";
+import { motion } from "framer-motion";
 
 const initialValues = {
   name: "",
@@ -30,6 +32,12 @@ const checkoutSchema = {
   zipCode: Yup.string().min(4, "Too short").required("*Required"),
   city: Yup.string().required("*Required"),
   country: Yup.string().required("*Required"),
+};
+
+const variants = {
+  hidden: { opacity: 0, y: -20 },
+  enter: { opacity: 1, y: 0 },
+  // exit: { opacity: 0, y: 20 },
 };
 
 export default function CheckoutPage({ prev }) {
@@ -54,8 +62,20 @@ export default function CheckoutPage({ prev }) {
   }, [paymentType]);
   return (
     <>
+      <Head>
+        <title>Audio Phile | Checkout </title>
+        <meta name="keywords" content="checkout" />
+        <meta name="description" content="checkout" />
+      </Head>
       <NavbarComponent />
-      <main className="main-checkout">
+      <motion.main
+        className="main-checkout"
+        variants={variants}
+        initial="hidden"
+        animate="enter"
+        // exit="exit"
+        transition={{ type: "linear", duration: "0.8" }}
+      >
         <div className="prev-btn">
           <Link href={prev} passHref>
             <a>Go Back</a>
@@ -203,7 +223,7 @@ export default function CheckoutPage({ prev }) {
           )}
         </Formik>
         {done && <Confirmation />}
-      </main>
+      </motion.main>
       <footer>
         <FooterComponent />
       </footer>

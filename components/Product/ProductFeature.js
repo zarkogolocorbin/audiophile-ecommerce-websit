@@ -5,6 +5,7 @@ export default function ProductFeatureComponent({
   secondFeatureText,
   includes,
 }) {
+  
   return (
     <section className={styles.features}>
       <div className={styles["features-text"]}>
